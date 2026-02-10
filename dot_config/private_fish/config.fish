@@ -9,8 +9,9 @@ set -x LC_ALL zh_CN.UTF-8
 
 
 # Http proxy
-set -gx http_proxy "http://127.0.0.1:2080"
-set -gx https_proxy "http://127.0.0.1:2080"
+#
+# set -gx http_proxy "http://127.0.0.1:2080"
+# set -gx https_proxy "http://127.0.0.1:2080"
 
 # 设置默认编辑器（如 Neovim）
 set -gx EDITOR /usr/bin/nvim
@@ -24,4 +25,12 @@ if type -q oh-my-posh
 end
 
 alias pixix "pixi x"
+alias zed "zeditor"
+alias auth "just -f ~/justfile login"
+alias dae-restart "just -f ~/justfile dae-restart"
+alias dae-logs "journalctl /usr/bin/dae -f"
+alias lgg "lazygit"
 # alias uvx\ tool "uv tool"
+
+# uv
+fish_add_path "/home/butter/.local/bin"
